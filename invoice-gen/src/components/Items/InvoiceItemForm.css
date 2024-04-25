@@ -1,93 +1,47 @@
 .InvoiceItemForm {
-  margin: 0 auto;
-  padding: 1%;
-}
-
-.InvoiceItemForm h2 {
-  text-align: center;
-}
-
-.InvoiceItemForm form {
-  display: flex;
-  flex-direction: column;
-}
-
-.InvoiceItemForm label {
-  font-weight: bold;
-}
-
-.InvoiceItemForm .product-inp{
-    width: 13%;
-}
-.InvoiceItemForm .hsn,
-.InvoiceItemForm .rate,
-.InvoiceItemForm .taxable,
-.InvoiceItemForm .gstAmt,
-.InvoiceItemForm .total {
-    width: 7.7%;
-}
-
-
-.InvoiceItemForm input {
-    width: 3%;
+    margin: 0 auto;
     padding: 1%;
-    margin-bottom: 1%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 1%;
-}
-
-
-
-
-.InvoiceItemForm button {
-  padding: 1% 2%;
-  margin-top: 1%;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-
-}
-
-.InvoiceItemForm button:hover {
-  background-color: #0056b3;
-}
-
-.Invoice-heading .label-product,
-.Invoice-heading .label-qty,
-.Invoice-heading .label-rate,
-.Invoice-heading .label-taxable,
-.Invoice-heading .label-total
-{
-    margin-left: 5.6%;
-}
-
-
-.Invoice-heading .label-hsn{
-    margin-left: 9%;
-}
-
-.Invoice-heading .label-unit,
-.Invoice-heading .label-gst,
-.Invoice-heading .label-gstAmt
-{
-    margin-left: 4%;
-}
-
-
-/* .totals{
-    display: inline-block;
-    font-size: 1.3rem;
+  }
+  
+  .InvoiceItemForm h2 {
+    text-align: center;
+  }
+  
+  .InvoiceItemForm form {
     display: flex;
     flex-direction: column;
-    align-items: end;
-    margin-right: 4%;
-    line-height: 2rem;
-} */
+  }
+  
+  .InvoiceItemForm label {
+    font-weight: bold;
+  }
+  
+  .InvoiceItemForm input,
+  .InvoiceItemForm button {
+    width: 5vw;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .InvoiceItemForm .productNamee {
+    width: 9vw;
+  }
 
-.totals-container {
+
+  .InvoiceItemForm button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .InvoiceItemForm button:hover {
+    background-color: #0056b3;
+  }
+  
+  .totals-container {
     display: flex;
     justify-content: flex-end;
     margin-right: 5%;

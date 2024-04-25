@@ -85,103 +85,123 @@ function InvoiceItemForm({ onAddItem }) {
   return (
     <div>
       <form className="InvoiceItemForm">
-        <div className="Invoice-heading">
-          <label className="label-sno">SNO</label>
-          <label className="label-product">Product Name</label>
-          <label className="label-hsn">HSN</label>
-          <label className="label-qty">Qty</label>
-          <label className="label-unit">Unit</label>
-          <label className="label-rate">Rate</label>
-          <label className="label-taxable">TaxableValue</label>
-          <label className="label-gst">GST%</label>
-          <label className="label-gstAmt">GST Amt</label>
-          <label className="label-total">Total</label>
-        </div>
-        {items.map((item, index) => (
-          <div key={index}>
-            <input
-              type="text"
-              name="sno"
-              value={item.sno}
-              readOnly
-              placeholder="Sno."
-            />
-            <input
-              className="product-inp"
-              type="text"
-              name="productName"
-              value={item.productName}
-              onChange={(e) => handleChange(index, e)}
-              placeholder="Enter Product Name"
-            />
-            <input
-              type="text"
-              className="hsn"
-              name={`hsn-${index}`}
-              value={item.hsn}
-              onChange={(e) => handleChange(index, e)}
-              placeholder="HSN"
-            />
-            <input
-              type="number"
-              name="qty"
-              value={item.qty}
-              onChange={(e) => handleChange(index, e)}
-              placeholder="Qty"
-            />
-            <input
-              type="text"
-              name="unit"
-              value={item.unit}
-              onChange={(e) => handleChange(index, e)}
-              placeholder="Unit"
-            />
-            <input
-              type="number"
-              className="rate"
-              name="rate"
-              value={item.rate}
-              onChange={(e) => handleChange(index, e)}
-              placeholder="Rate"
-            />
-            <input
-              type="number"
-              className="taxable"
-              name="taxable"
-              value={item.taxable}
-              readOnly
-              placeholder="Taxable"
-            />
-            <input
-              type="number"
-              name="gst"
-              value={item.gst}
-              onChange={(e) => handleChange(index, e)}
-              placeholder="GST %"
-            />
-            <input
-              type="number"
-              className="gstAmt"
-              name="gstAmt"
-              value={item.gstAmt}
-              readOnly
-              placeholder="GST Amt"
-            />
-            <input
-              type="number"
-              className="total"
-              name="total"
-              value={item.total}
-              readOnly
-              placeholder="Total"
-            />
-            <button type="button" onClick={() => handleRemoveItem(index)}>
-              -
-            </button>
-          </div>
-        ))}
+        <table>
+          <thead>
+            <tr>
+              <th>SNO</th>
+              <th>Product Name</th>
+              <th>HSN</th>
+              <th>Qty</th>
+              <th>Unit</th>
+              <th>Rate</th>
+              <th>Taxable Value</th>
+              <th>GST %</th>
+              <th>GST Amt</th>
+              <th>Total</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {items.map((item, index) => (
+              <tr key={index}>
+                <td>{item.sno}</td>
+                <td>
+                  <input
+                    type="text"
+                    className="productNamee"
+                    name="productName"
+                    value={item.productName}
+                    onChange={(e) => handleChange(index, e)}
+                    placeholder="Enter Product Name"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    name={`hsn-${index}`}
+                    value={item.hsn}
+                    onChange={(e) => handleChange(index, e)}
+                    placeholder="HSN"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    name="qty"
+                    value={item.qty}
+                    onChange={(e) => handleChange(index, e)}
+                    placeholder="Qty"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    name="unit"
+                    value={item.unit}
+                    onChange={(e) => handleChange(index, e)}
+                    placeholder="Unit"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    name="rate"
+                    value={item.rate}
+                    onChange={(e) => handleChange(index, e)}
+                    placeholder="Rate"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    className="taxable"
+                    name="taxable"
+                    value={item.taxable}
+                    readOnly
+                    placeholder="Taxable"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    name="gst"
+                    value={item.gst}
+                    onChange={(e) => handleChange(index, e)}
+                    placeholder="GST %"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    className="gstAmt"
+                    name="gstAmt"
+                    value={item.gstAmt}
+                    readOnly
+                    placeholder="GST Amt"
+                  />
+                </td>
+                <td>
+                  {" "}
+                  <input
+                    type="number"
+                    className="total"
+                    name="total"
+                    value={item.total}
+                    readOnly
+                    placeholder="Total"
+                  />
+                </td>
+                <td>
+                  <button type="button" onClick={() => handleRemoveItem(index)}>
+                    Remove
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
         <button type="button" onClick={handleAddItem}>
-          +
+          Add Item
         </button>
       </form>
       <div className="totals-container">
