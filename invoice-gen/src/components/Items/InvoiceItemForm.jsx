@@ -3,7 +3,7 @@ import "./InvoiceItemForm.css";
 
 function InvoiceItemForm({ onAddItem }) {
   const [items, setItems] = useState([
-    { sno: "1", productName: "", qty: "", rate: "", gst: "", total: "" },
+    { sno: "1", productName: "", qty: "",unit:"Nos.", rate: "", gst: "", total: "" },
   ]);
 
   const [totals, setTotals] = useState({
@@ -28,6 +28,7 @@ function InvoiceItemForm({ onAddItem }) {
         rate: "",
         gst: "",
         total: "",
+        unit: "Nos."
       },
     ]);
   };
