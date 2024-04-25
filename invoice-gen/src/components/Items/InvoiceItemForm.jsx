@@ -1,10 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./InvoiceItemForm.css";
 
 function InvoiceItemForm({ onAddItem }) {
   const [items, setItems] = useState([
     { sno: "1", productName: "", qty: "", rate: "", gst: "", total: "" },
   ]);
+
+  const [totals, setTotals] = useState({
+    totalTaxable: 0,
+    totalGSTAmt: 0,
+    overallTotal: 0,
+  });
+
+  useEffect(() => {
+    updateTotals();
+  }, [items]);
 
   const handleAddItem = () => {
     const lastSno =
@@ -52,6 +62,24 @@ function InvoiceItemForm({ onAddItem }) {
     ).toFixed(2);
 
     setItems(updatedItems);
+  };
+
+  const updateTotals = () => {
+    let totalTaxable = 0;
+    let totalGSTAmt = 0;
+    let overallTotal = 0;
+
+    items.forEach((item) => {
+      totalTaxable += parseFloat(item.taxable);
+      totalGSTAmt += parseFloat(item.gstAmt);
+      overallTotal += parseFloat(item.total);
+    });
+
+    setTotals({
+      totalTaxable: totalTaxable.toFixed(2),
+      totalGSTAmt: totalGSTAmt.toFixed(2),
+      overallTotal: overallTotal.toFixed(2),
+    });
   };
 
   return (
@@ -156,6 +184,24 @@ function InvoiceItemForm({ onAddItem }) {
           +
         </button>
       </form>
+      <div className="totals-container">
+        <table className="totals">
+          <thead>
+            <tr>
+              <th>Total Taxable</th>
+              <th>Total GST Amount</th>
+              <th>Overall Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{`₹${totals.totalTaxable}`}</td>
+              <td>{`₹${totals.totalGSTAmt}`}</td>
+              <td>{`₹${totals.overallTotal}`}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }

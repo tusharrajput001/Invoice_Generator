@@ -75,3 +75,36 @@
 {
     margin-left: 4%;
 }
+
+
+/* .totals{
+    display: inline-block;
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-right: 4%;
+    line-height: 2rem;
+} */
+
+.totals-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5%;
+  }
+  
+  .totals {
+    border-collapse: collapse;
+  }
+  
+  .totals th,
+  .totals td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: right; /* Align text to the right */
+  }
+  
+  .totals th {
+    background-color: #f2f2f2;
+  }
+  
