@@ -1,67 +1,82 @@
 .InvoiceItemForm {
-    margin: 0 auto;
-    padding: 1%;
-  }
-  
-  .InvoiceItemForm h2 {
-    text-align: center;
-  }
-  
-  .InvoiceItemForm form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .InvoiceItemForm label {
-    font-weight: bold;
-  }
-  
-  .InvoiceItemForm input,
-  .InvoiceItemForm button {
-    width: 5vw;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .InvoiceItemForm .productNamee {
-    width: 9vw;
-  }
+  margin: 0 auto;
+  padding: 1%;
+}
 
+.InvoiceItemForm h2 {
+  text-align: center;
+}
 
-  .InvoiceItemForm button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .InvoiceItemForm button:hover {
-    background-color: #0056b3;
-  }
-  
-  .totals-container {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 5%;
-  }
-  
-  .totals {
-    width: 35rem;
+.InvoiceItemForm form {
+  display: flex;
+  flex-direction: column;
+}
 
-    border-collapse: collapse;
-  }
-  
-  .totals th,
-  .totals td {
-    padding: 8px;
-    border: 1px solid #ddd;
-    text-align: center; 
+.InvoiceItemForm label {
+  font-weight: bold;
+}
 
-  }
-  
-  .totals th {
-    background-color: #f2f2f2;
-  }
-  
+.InvoiceItemForm input,
+.InvoiceItemForm button {
+  width: 5vw;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.InvoiceItemForm .productNamee {
+  width: 9vw;
+}
+
+.InvoiceItemForm button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.InvoiceItemForm button:hover {
+  background-color: #0056b3;
+}
+
+.totals-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5%;
+}
+
+.totals {
+  width: 35rem;
+
+  border-collapse: collapse;
+}
+
+.totals th,
+.totals td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.totals th {
+  background-color: #f2f2f2;
+}
+
+.alphaTotal {
+  width: 50%;
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.headtot {
+  display: flex;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.alpha_text {
+  width: 99%;
+  margin: auto;
+  font-size: 1.5rem;
+}

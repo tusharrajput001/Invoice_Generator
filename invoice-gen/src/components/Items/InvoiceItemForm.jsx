@@ -206,6 +206,13 @@ function InvoiceItemForm({ onAddItem }) {
         </button>
       </form>
       <div className="totals-container">
+
+        <div className="alphaTotal">
+            <div className="headtot">Total Proforma Invoice Amount In Words</div>
+            <input className="alpha_text" type="text"></input>
+        </div>
+
+
         <table className="totals">
           <thead>
             <tr>
