@@ -41,20 +41,20 @@
 }
 
 .totals-container {
+  width: 100%;
   display: flex;
   justify-content: flex-end;
-  margin-right: 5%;
+  margin-right: 2%;
 }
 
 .totals {
-  width: 35rem;
-
+  width: 50%;
   border-collapse: collapse;
 }
 
 .totals th,
 .totals td {
-  padding: 8px;
+  padding: 13px;
   border: 1px solid #ddd;
   text-align: center;
 }
@@ -65,7 +65,7 @@
 
 .alphaTotal {
   width: 50%;
-  border: 2px solid black;
+  border: 1px solid black;
   padding: 10px;
 }
 
@@ -77,6 +77,5 @@
 
 .alpha_text {
   width: 99%;
-  margin: auto;
   font-size: 1.5rem;
 }

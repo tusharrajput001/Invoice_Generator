@@ -4,6 +4,7 @@ import './index.css'
 import Date from './components/Datepart/Date'
 import Btst from './components/BtStpart/Btst'
 import InvoiceItemForm from './components/Items/InvoiceItemForm'
+import Footer from './components/Footer/Footer'
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Date/>
         <Btst/>
         <InvoiceItemForm/>
+        <Footer/>
       </div>
     </>
   )
