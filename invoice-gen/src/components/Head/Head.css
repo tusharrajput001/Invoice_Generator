@@ -1,0 +1,15 @@
+.head-part{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 30px;  
+    padding-top: 1%;
+    border-bottom: 2px solid black;
+}
+
+.head-part p{
+    font-weight: 600;
+}
+
+

@@ -1,0 +1,12 @@
+.btst-head{
+    background-color: #d8ecfc;
+    display: flex;
+    justify-content: center;
+    font-size: medium; 
+    padding: .6%;  
+}
+
+.btHead{
+    width: 49.95%;
+
+}
