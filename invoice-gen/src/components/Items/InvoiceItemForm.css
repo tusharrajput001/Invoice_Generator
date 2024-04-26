@@ -1,6 +1,7 @@
 .InvoiceItemForm {
   margin: 0 auto;
   padding: 1%;
+  font-size: large;
 }
 
 .InvoiceItemForm h2 {
@@ -23,6 +24,11 @@
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-size: large;
+}
+
+.InvoiceItemForm textarea{
+  font-size: large;
 }
 
 .InvoiceItemForm .productNamee {
@@ -78,4 +84,8 @@
 .alpha_text {
   width: 99%;
   font-size: 1.5rem;
+}
+
+.productName {
+  resize: vertical; 
 }

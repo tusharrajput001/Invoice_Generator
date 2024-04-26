@@ -107,9 +107,8 @@ function InvoiceItemForm({ onAddItem }) {
               <tr key={index}>
                 <td>{item.sno}</td>
                 <td>
-                  <input
-                    type="text"
-                    className="productNamee"
+                  <textarea
+                    className="productName"
                     name="productName"
                     value={item.productName}
                     onChange={(e) => handleChange(index, e)}
