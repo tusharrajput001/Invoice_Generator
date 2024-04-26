@@ -1,6 +1,9 @@
 .accountDetails {
   width: 48.5%;
   padding: 20px;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+
 }
 
 .account-section {

@@ -2,6 +2,7 @@
   margin: 0 auto;
   padding: 1%;
   font-size: large;
+  border: 1px solid black;
 }
 
 .InvoiceItemForm h2 {
@@ -49,29 +50,33 @@
 .totals-container {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
-  margin-right: 2%;
+  justify-content: flex-end; 
 }
 
 .totals {
   width: 50%;
   border-collapse: collapse;
+  border-right: 1px solid black;
+  
+
 }
 
 .totals th,
 .totals td {
   padding: 13px;
-  border: 1px solid #ddd;
   text-align: center;
+
 }
 
 .totals th {
   background-color: #f2f2f2;
+
 }
 
 .alphaTotal {
   width: 50%;
-  border: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
   padding: 10px;
 }
 
