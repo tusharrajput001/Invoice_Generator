@@ -3,16 +3,10 @@
   margin: 0;
   padding: 0;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  overflow-x: hidden;
 }
 
-/* .container{
-  width: 70%;
-  height: auto;
-  margin: auto;
-  margin-top: 1%;
-  padding: 3%;
 
-} */
 
 .download-btn {
   display: inline-block;
@@ -54,4 +48,19 @@
   margin: auto;
   margin-top: 1%;
   padding: 3%;
+
+} 
+.printBtn{
+  padding: 15px;
+  font-size: larger;
+  width: 7em;
+  margin: 1em;
+  border-radius: 50px;
+  font-weight: 600;
+  background-color: rgb(114, 171, 220);
+  cursor: pointer;
+}
+
+.printBtn:hover{
+  background-color: rgb(113, 231, 113);
 }

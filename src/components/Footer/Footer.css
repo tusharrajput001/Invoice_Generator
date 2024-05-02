@@ -2,7 +2,7 @@
   width: 50%;
   padding: 20px; 
   border: 1px solid black;
-
+  overflow-y: hidden;
 
 }
 
@@ -11,7 +11,12 @@
   justify-content: space-between;
   margin-bottom: 10px;  
 }
-
+.account-section input {
+  font-size: 1.2vw;
+  border: none;
+  width: 22vw;
+  text-align: right;
+}
 .terms{
   width: 100%;
   height: 50%;
@@ -39,6 +44,7 @@
   border-bottom: 1px solid black;
   height: auto;
   padding-top: 3%;
+  overflow-y: hidden; 
 }
 
 .footer-container {

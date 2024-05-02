@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <ReactToPrint
-        trigger={() => <button>Print</button>}
+        trigger={() => <button className='printBtn'>Print</button>}
         content={() => componentRef.current}
         documentTitle='Printable Content'
       />
