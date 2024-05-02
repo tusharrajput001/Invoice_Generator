@@ -64,3 +64,12 @@
 .printBtn:hover{
   background-color: rgb(113, 231, 113);
 }
+
+.Heading{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: rgba(59, 115, 237, 0.795);
+  text-align: center;
+  margin: 1%;
+  font-size: 2.5rem;
+  -webkit-text-stroke: 2px black; 
+}
