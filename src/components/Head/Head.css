@@ -16,13 +16,13 @@
 .head-inp {
     font-size: 1.2em;
     border: none;
-    width: 18vw; 
+    width: 25rem; 
 }
 
 .gst-inp{
     font-size: 1.5em;
     border: none;
-    width: 18vw; 
+    width: 25rem; 
 }
 
 .head-inp::placeholder {
