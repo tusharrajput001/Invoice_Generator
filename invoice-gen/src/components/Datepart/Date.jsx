@@ -9,7 +9,7 @@ function Date() {
     </div>
     <div className='btstContainer'>
         <div className='billedTo'>
-            <label>Proforma Invoice No.</label>
+            <label>Invoice No.</label>
             <input type='number'></input><br/>
             <label>Invoice Date</label>
             <input type='date'></input><br/>
@@ -21,7 +21,7 @@ function Date() {
         <div className='shippedTo'>
             <label>Ship To</label>
             <input type='text'></input><br/>
-            <label>Transporter Name</label>
+            <label>Transporter</label>
             <input type='text'></input><br/>
             <label>Date of supply</label>
             <input type='date'></input><br/>

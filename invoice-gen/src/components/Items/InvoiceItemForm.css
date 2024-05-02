@@ -18,9 +18,17 @@
   font-weight: bold;
 }
 
-.InvoiceItemForm input,
-.InvoiceItemForm button {
+.InvoiceItemForm input
+ {
   width: 5vw;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: large;
+}
+.InvoiceItemForm button{
+  width: 2vw;
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
@@ -33,7 +41,7 @@
 }
 
 .InvoiceItemForm .productNamee {
-  width: 9vw;
+  width: 15vw;
 }
 
 .InvoiceItemForm button {

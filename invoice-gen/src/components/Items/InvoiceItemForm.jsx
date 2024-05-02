@@ -193,7 +193,7 @@ function InvoiceItemForm({ onAddItem }) {
                 </td>
                 <td>
                   <button type="button" onClick={() => handleRemoveItem(index)}>
-                    Remove
+                    -
                   </button>
                 </td>
               </tr>
@@ -201,7 +201,7 @@ function InvoiceItemForm({ onAddItem }) {
           </tbody>
         </table>
         <button type="button" onClick={handleAddItem}>
-          Add Item
+          +
         </button>
       </form>
       <div className="totals-container">
