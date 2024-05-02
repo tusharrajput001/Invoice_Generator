@@ -1,7 +1,6 @@
 .InvoiceItemForm {
   margin: 0 auto;
   padding: 1%;
-  font-size: large;
   border: 1px solid black;
 }
 
@@ -20,15 +19,15 @@
 
 .InvoiceItemForm input
  {
-  width: 5vw;
+  width: 8vw;
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: large;
+  font-size: small;
 }
 .InvoiceItemForm button{
-  width: 2vw;
+  width: 4vw;
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
@@ -37,11 +36,19 @@
 }
 
 .InvoiceItemForm textarea{
-  font-size: large;
+  font-size: medium;
 }
 
-.InvoiceItemForm .productNamee {
-  width: 15vw;
+.InvoiceItemForm .productName {
+  width: 17vw;
+}
+
+.InvoiceItemForm .HsnClass,
+.InvoiceItemForm .QtyClass,
+.InvoiceItemForm .UnitClass,
+.InvoiceItemForm .GstP
+ {
+  width: 4vw;
 }
 
 .InvoiceItemForm button {
@@ -101,4 +108,35 @@
 
 .productName {
   resize: vertical; 
+}
+@media print {
+  .InvoiceItemForm button[type="button"] {
+    display: none;
+  }
+  .InvoiceItemForm th:nth-child(11),
+  .InvoiceItemForm td:nth-child(11) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1318px) {
+  /* Adjust font size for headings */
+  .InvoiceItemForm th {
+    font-size: 1.2vw;
+  }
+
+  .InvoiceItemForm input
+  {
+   width: 7.3vw;
+   padding: 2px;
+   margin-bottom: 1px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   font-size:1vw;
+ }
+
+ .InvoiceItemForm .productName {
+  font-size: small;
+}
+
 }

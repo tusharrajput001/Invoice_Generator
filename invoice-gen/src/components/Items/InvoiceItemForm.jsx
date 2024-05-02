@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, forwardRef } from "react";
 import "./InvoiceItemForm.css";
 
-function InvoiceItemForm({ onAddItem }) {
+const InvoiceItemForm = forwardRef(({ onAddItem }, ref) => {
   const [items, setItems] = useState([
-    { sno: "1", productName: "", qty: "",unit:"Nos.", rate: "", gst: "", total: "" },
+    { sno: "1", productName: "", qty: "", unit: "Nos.", rate: "", gst: "", total: "" },
   ]);
 
   const [totals, setTotals] = useState({
@@ -17,8 +17,7 @@ function InvoiceItemForm({ onAddItem }) {
   }, [items]);
 
   const handleAddItem = () => {
-    const lastSno =
-      items.length > 0 ? parseInt(items[items.length - 1].sno) + 1 : 1;
+    const lastSno = items.length > 0 ? parseInt(items[items.length - 1].sno) + 1 : 1;
     setItems([
       ...items,
       {
@@ -28,7 +27,7 @@ function InvoiceItemForm({ onAddItem }) {
         rate: "",
         gst: "",
         total: "",
-        unit: "Nos."
+        unit: "Nos.",
       },
     ]);
   };
@@ -51,15 +50,11 @@ function InvoiceItemForm({ onAddItem }) {
 
     // Calculate GST Amt
     const gstPercent = parseFloat(updatedItems[index].gst);
-    updatedItems[index].gstAmt = (
-      (gstPercent / 100) *
-      updatedItems[index].taxable
-    ).toFixed(2);
+    updatedItems[index].gstAmt = ((gstPercent / 100) * updatedItems[index].taxable).toFixed(2);
 
     // Calculate Total
     updatedItems[index].total = (
-      parseFloat(updatedItems[index].taxable) +
-      parseFloat(updatedItems[index].gstAmt)
+      parseFloat(updatedItems[index].taxable) + parseFloat(updatedItems[index].gstAmt)
     ).toFixed(2);
 
     setItems(updatedItems);
@@ -84,7 +79,7 @@ function InvoiceItemForm({ onAddItem }) {
   };
 
   return (
-    <div>
+    <div ref={ref}>
       <form className="InvoiceItemForm">
         <table>
           <thead>
@@ -95,7 +90,7 @@ function InvoiceItemForm({ onAddItem }) {
               <th>Qty</th>
               <th>Unit</th>
               <th>Rate</th>
-              <th>Taxable Value</th>
+              <th>Value</th>
               <th>GST %</th>
               <th>GST Amt</th>
               <th>Total</th>
@@ -117,6 +112,8 @@ function InvoiceItemForm({ onAddItem }) {
                 </td>
                 <td>
                   <input
+                    className="HsnClass"
+            
                     type="text"
                     name={`hsn-${index}`}
                     value={item.hsn}
@@ -126,6 +123,7 @@ function InvoiceItemForm({ onAddItem }) {
                 </td>
                 <td>
                   <input
+                    className="QtyClass"
                     type="number"
                     name="qty"
                     value={item.qty}
@@ -135,6 +133,7 @@ function InvoiceItemForm({ onAddItem }) {
                 </td>
                 <td>
                   <input
+                    className="UnitClass"
                     type="text"
                     name="unit"
                     value={item.unit}
@@ -144,6 +143,7 @@ function InvoiceItemForm({ onAddItem }) {
                 </td>
                 <td>
                   <input
+                    className="RateClass"
                     type="number"
                     name="rate"
                     value={item.rate}
@@ -153,6 +153,7 @@ function InvoiceItemForm({ onAddItem }) {
                 </td>
                 <td>
                   <input
+                
                     type="number"
                     className="taxable"
                     name="taxable"
@@ -163,25 +164,26 @@ function InvoiceItemForm({ onAddItem }) {
                 </td>
                 <td>
                   <input
+                    className="GstP"
                     type="number"
                     name="gst"
                     value={item.gst}
                     onChange={(e) => handleChange(index, e)}
-                    placeholder="GST %"
+                    placeholder="GST%"
                   />
                 </td>
                 <td>
                   <input
+                
                     type="number"
                     className="gstAmt"
                     name="gstAmt"
                     value={item.gstAmt}
                     readOnly
-                    placeholder="GST Amt"
+                    placeholder="GST"
                   />
                 </td>
                 <td>
-                  {" "}
                   <input
                     type="number"
                     className="total"
@@ -205,13 +207,10 @@ function InvoiceItemForm({ onAddItem }) {
         </button>
       </form>
       <div className="totals-container">
-
         <div className="alphaTotal">
-            <div className="headtot">Total Proforma Invoice Amount In Words</div>
-            <input className="alpha_text" type="text"></input>
+          <div className="headtot">Total Proforma Invoice Amount In Words</div>
+          <input className="alpha_text" type="text"></input>
         </div>
-
-
         <table className="totals">
           <thead>
             <tr>
@@ -231,6 +230,6 @@ function InvoiceItemForm({ onAddItem }) {
       </div>
     </div>
   );
-}
+});
 
 export default InvoiceItemForm;
